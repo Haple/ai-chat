@@ -40,7 +40,7 @@ export default async function IdeaGeneratorPage({ searchParams:{pipelineId, curr
   }
 
   return (
-    <>
+    <div>
       <IdeaGenerator userId={userId} pipelineId={pipelineId} currentStep={parsedCurrentStep}>
 
         {pipelineId &&
@@ -48,7 +48,7 @@ export default async function IdeaGeneratorPage({ searchParams:{pipelineId, curr
         }
 
       </IdeaGenerator>
-    </>
+    </div>
   );
 }
 
