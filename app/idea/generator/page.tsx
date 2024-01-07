@@ -7,7 +7,7 @@ import { IdeaGenerator } from '@/components/idea-generator'
 import { auth } from '@/auth'
 import { runPipelineStep } from './actions';
 
-export interface IdeaGeneratorPageProps extends React.ComponentProps<'div'> {
+interface IdeaGeneratorPageProps extends React.ComponentProps<'div'> {
 
   searchParams:{
     pipelineId?: string,
@@ -15,7 +15,7 @@ export interface IdeaGeneratorPageProps extends React.ComponentProps<'div'> {
   }
 }
 
-export default async function IdeaGeneratorPage({ searchParams:{pipelineId, currentStep = '0'}, children }: IdeaGeneratorPageProps) {
+export default async function IdeaGeneratorPage({ searchParams:{pipelineId, currentStep = '0'} }: IdeaGeneratorPageProps) {
 
   const session = await auth();
   const parsedCurrentStep = parseInt(currentStep);
